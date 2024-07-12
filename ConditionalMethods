@@ -1,0 +1,26 @@
+package day2;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ConditionalMethods {
+
+	public static void main(String[] args)
+	{
+		 WebDriver driver = new ChromeDriver();
+		 driver.manage().window().maximize();
+		 driver.get("https://demo.nopcommerce.com/register");
+		 WebElement logo = driver.findElement(By.xpath("//img[@alt='nopCommerce demo store']"));
+		 System.out.println(logo.isDisplayed());
+		 
+		 
+		 boolean inputbox = driver.findElement(By.id("FirstName")).isEnabled();
+		 System.out.println(inputbox);
+		 
+		 boolean radiobutton = driver.findElement(By.xpath("//input[@id='gender-male']")).isSelected();
+		 System.out.println(radiobutton);
+	}
+
+}
