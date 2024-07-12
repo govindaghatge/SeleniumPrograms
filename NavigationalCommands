@@ -1,0 +1,25 @@
+package day3;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Navigationcommands {
+
+	public static void main(String[] args) throws InterruptedException
+	{
+		
+		 WebDriver driver = new ChromeDriver();
+		 driver.manage().window().maximize();
+		 driver.navigate().to("https://demo.nopcommerce.com/register");
+		 driver.navigate().to("https://opensource-demo.orangehrmlive.com/");
+		 
+		 driver.navigate().forward();
+		 driver.navigate().back();
+		 
+		 Thread.sleep(2000);
+		 driver.navigate().refresh();
+		 
+		 
+	}
+
+}
