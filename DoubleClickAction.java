@@ -30,7 +30,15 @@ public class DoubleClickAction {
 		 Actions act = new Actions(driver);
 		 act.doubleClick(button).perform();
 		 
-		 System.out.println(Field2.getText());
+		 
+		 if((Field2.getAttribute("Value")).equals("Welcome"))
+			{
+			   System.out.println("Test Passed");
+	        }
+		 else
+		   {
+			  System.out.println("Test Failed"); 
+		   }
 		 
 	}
 
